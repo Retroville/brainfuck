@@ -44,9 +44,9 @@ int brainfuck(char *src)
 
 int main()
 {
-	char *source;		/* Buffer to contain brainfuck source */
-	int size, max;	/* Size of the source buffer */
-	int c;					/* Current (char) int read from stdin */
+	char *source;     /* Buffer to contain brainfuck source */
+	int size, max;    /* Size of the source buffer */
+	int c;            /* Current (char) int read from stdin */
 	int i, j;
 
 	//why
