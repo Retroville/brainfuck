@@ -21,21 +21,21 @@ int brainfuck(char *src)
 			case '.':  putchar(*ptr); break;
 			case ',': *ptr=getchar(); break;
 			case '[': 
-								if (!(*ptr)) {
-									while ((c = *src++) != ']');
-								}
-								break;
+				if (!(*ptr)) {
+					while ((c = *src++) != ']');
+				}
+				break;
 			case ']': 
-								lvl = 1;
-								src -= 2;
-								while (lvl > 0) {
-									c = *--src;
-									if (c == '[')
-										lvl--;
-									else if (c == ']') 
-										lvl++;
-								}
-								break;
+				lvl = 1;
+				src -= 2;
+				while (lvl > 0) {
+					c = *--src;
+					if (c == '[')
+						lvl--;
+					else if (c == ']') 
+						lvl++;
+				}	
+				break;
 		}
 	}
 	putchar('\n');
